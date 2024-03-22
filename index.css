@@ -16,13 +16,14 @@ body {
     align-items: center;
     justify-content: center;
     padding: 10px;
+    background-image: url(./imgs/body-background.jpg);
 }
 
 .container {
-    height: 80%;
-    width: 80%;
-    padding: 10px;
-    gap: 20px;
+    width: 76%;
+    padding: 12px;
+    gap: 0px;
+    border-radius: 10px;
     background-color: hotpink;
     display: flex;
     align-items: center;
@@ -50,6 +51,10 @@ body {
     cursor: pointer;
 }
 
+.bnt #end {
+    margin-top: 10px;
+}
+
 .bnt:hover {
     background-color: #000;
     color: #fff;
@@ -59,23 +64,30 @@ body {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    margin-top: 46px;
+    margin-top: 26px;
 }
 
 .img {
-    height: 300px;
-    width: 330px;
+    height: 200px;
+    width: 32%;
+    border-radius: 14px;
 }
 
 .quiz {
     display: none;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    background-color: #f86;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 4px;
+    padding: 0px;
+    background-color: #f86; 
 }
 
 .quiz input {
-    width: 100%;
+    width: 80%;
+}
+
+.quiz label {
+    width: 80%;
 }
