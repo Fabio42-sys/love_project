@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initButton.addEventListener("click", function (event) {
     event.preventDefault(); // Impede o comportamento padrão do botão
 
-    // Exibir a mensagem "Carregando o quiz" abaixo da div .imgs
+    // Adiciona a mensagem de carregamento
     var loadingMessage = document.createElement("p");
     loadingMessage.textContent = "Carregando o quiz";
     document.querySelector(".container").appendChild(loadingMessage);
@@ -143,6 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Esconde a mensagem de cálculo após 2.5 segundos
         setTimeout(function () {
+          explainText.innerHTML = "Veja seus resultados";
           calcMessage.remove();
           quizForm.style.display = "none";
 
@@ -150,8 +151,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
           imgs.style.display = "flex";
           var result = document.getElementById('result');
-
-          result.innerHTML = "";
 
           result.innerHTML += "Suas respostas certas: " + acertos + "<br>";
           result.innerHTML += "Suas respostas erradas: " + erros + "<br>";
